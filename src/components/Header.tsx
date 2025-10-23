@@ -11,8 +11,22 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = {
-    hi: ["मुख्य पृष्ठ", "वीडियो", "उत्पाद", "पूजा बुकिंग", "दशमहाविद्या", "संपर्क"],
-    en: ["Home", "Videos", "Products", "Puja Booking", "Dashamahavidya", "Contact"],
+    hi: [
+      { name: "मुख्य पृष्ठ", path: "/" },
+      { name: "वीडियो", path: "/videos" },
+      { name: "उत्पाद", path: "/products" },
+      { name: "पूजा बुकिंग", path: "/puja-booking" },
+      { name: "दशमहाविद्या", path: "/dashamahavidya" },
+      { name: "संपर्क", path: "/contact" },
+    ],
+    en: [
+      { name: "Home", path: "/" },
+      { name: "Videos", path: "/videos" },
+      { name: "Products", path: "/products" },
+      { name: "Puja Booking", path: "/puja-booking" },
+      { name: "Dashamahavidya", path: "/dashamahavidya" },
+      { name: "Contact", path: "/contact" },
+    ],
   };
 
   return (
@@ -39,10 +53,10 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
             {navItems[language].map((item, index) => (
               <a
                 key={index}
-                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                href={item.path}
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
-                {item}
+                {item.name}
               </a>
             ))}
           </nav>
@@ -77,11 +91,11 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
               {navItems[language].map((item, index) => (
                 <a
                   key={index}
-                  href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={item.path}
                   className="text-foreground hover:text-primary transition-colors font-medium py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item}
+                  {item.name}
                 </a>
               ))}
             </div>
