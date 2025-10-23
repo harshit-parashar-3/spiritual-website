@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#FFF8F0"/>
+
+  <!-- Book illustration -->
+  <rect x="250" y="150" width="300" height="350" fill="#8B4513" rx="10"/>
+  <rect x="270" y="170" width="260" height="310" fill="#F4E4C1" rx="5"/>
+
+  <!-- Pages -->
+  <line x1="400" y1="170" x2="400" y2="480" stroke="#D4AF37" stroke-width="2"/>
+  <line x1="320" y1="220" x2="480" y2="220" stroke="#C19A6B" stroke-width="1" opacity="0.5"/>
+  <line x1="320" y1="260" x2="480" y2="260" stroke="#C19A6B" stroke-width="1" opacity="0.5"/>
+  <line x1="320" y1="300" x2="480" y2="300" stroke="#C19A6B" stroke-width="1" opacity="0.5"/>
+
+  <!-- Om symbol on book -->
+  <text x="400" y="380" font-family="serif" font-size="80" font-weight="bold" fill="#FF6B35" text-anchor="middle">ॐ</text>
+
+  <!-- Title -->
+  <text x="400" y="80" font-family="serif" font-size="36" font-weight="bold" fill="#2C1810" text-anchor="middle">Shrimad Bhagwat Katha</text>
+  <text x="400" y="560" font-family="serif" font-size="28" fill="#FF6B35" text-anchor="middle">श्रीमद्भागवत कथा</text>
+</svg>

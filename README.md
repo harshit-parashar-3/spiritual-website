@@ -1,73 +1,199 @@
-# Welcome to your Lovable project
+# Spiritual Sanctuary Portal
 
-## Project info
+A modern web platform for Pandit Shree Prakash's spiritual services, featuring katha recitations, puja bookings, and authentic consecrated products.
 
-**URL**: https://lovable.dev/projects/0ec0d9bd-7aa0-4c88-9a46-95520e33916a
+## Overview
 
-## How can I edit this code?
+This portal provides a comprehensive digital presence for spiritual services including:
 
-There are several ways of editing your application.
+- **Katha Services**: Shrimad Bhagwat Katha, Ram Katha, Devi Bhagwat, Shiv Mahapuran
+- **Puja Bookings**: Schedule and manage spiritual ceremonies
+- **Consecrated Products**: Browse and purchase authentic spiritual items
+- **Event Calendar**: Stay updated with upcoming spiritual events
+- **About & Contact**: Learn more about Pandit Shree Prakash and get in touch
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0ec0d9bd-7aa0-4c88-9a46-95520e33916a) and start prompting.
+This project is built with modern web technologies:
 
-Changes made via Lovable will be committed automatically to this repo.
+- **React 18** - UI library for building interactive interfaces
+- **TypeScript** - Type-safe JavaScript for better development experience
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework for styling
+- **shadcn/ui** - High-quality React components built on Radix UI
+- **React Router** - Client-side routing
+- **React Hook Form** - Form management with validation
+- **Zod** - Schema validation
+- **Lucide React** - Beautiful icon library
+- **TanStack Query** - Powerful data synchronization
 
-**Use your preferred IDE**
+## Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v18 or higher recommended)
+- npm or yarn package manager
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository:
+```bash
+git clone <your-repository-url>
+cd spiritual-sanctuary-portal
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Available Scripts
 
-**Use GitHub Codespaces**
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run build:dev` - Build in development mode
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint to check code quality
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+spiritual-sanctuary-portal/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/         # Page components for routing
+│   ├── lib/           # Utility functions and configurations
+│   └── main.tsx       # Application entry point
+├── public/            # Static assets
+│   ├── images/        # Image assets
+│   │   ├── katha/     # Katha-related images
+│   │   ├── products/  # Product images
+│   │   └── events/    # Event images
+│   ├── videos/        # Video content
+│   └── favicon.svg    # Site icon
+└── index.html         # HTML template
+```
 
-This project is built with:
+## Media Assets
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Images
 
-## How can I deploy this project?
+The project includes sample spiritual images in SVG format:
 
-Simply open [Lovable](https://lovable.dev/projects/0ec0d9bd-7aa0-4c88-9a46-95520e33916a) and click on Share -> Publish.
+**Katha Images** (`/public/images/katha/`)
+- `bhagwat-katha.svg` - Shrimad Bhagwat Katha illustration
+- `ram-katha.svg` - Ram Katha imagery
+- `devi-bhagwat.svg` - Devi Bhagwat representation
+- `shiv-mahapuran.svg` - Shiv Mahapuran artwork
 
-## Can I connect a custom domain to my Lovable project?
+**Product Images** (`/public/images/products/`)
+- `rudraksha.svg` - Rudraksha mala illustration
+- `yantras.svg` - Sri Yantra design
+- `sacred-books.svg` - Sacred scriptures
+- `puja-items.svg` - Puja essentials
 
-Yes, you can!
+**Event Images** (`/public/images/events/`)
+- `spiritual-gathering.svg` - Spiritual event illustration
+- `mahayagna.svg` - Mahayagna ceremony
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**General Images**
+- `hero-banner.svg` - Homepage hero banner
+- `favicon.svg` - Site favicon with Om symbol
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Videos
+
+Video placeholders are located in `/public/videos/`. Replace the placeholder text files with actual video content in MP4, WebM, or OGG formats.
+
+See `/public/videos/README.md` for detailed video specifications and guidelines.
+
+**Recommended Video Formats:**
+- MP4 (H.264) - Primary format for best compatibility
+- WebM (VP9) - Modern browsers
+- Resolution: 1280x720 (HD) or 1920x1080 (Full HD)
+- Bitrate: 5-10 Mbps
+
+### Replacing Sample Content
+
+All sample images are in SVG format and should be replaced with actual photos and videos:
+
+1. Replace SVG files with JPG/PNG photos (recommended: 1920x1080 for images)
+2. Add actual video content in the videos directory
+3. Update image references in your components
+4. Optimize images using tools like ImageOptim or TinyPNG
+5. For videos, use FFmpeg or HandBrake for web optimization
+
+## Features
+
+### Responsive Design
+The portal is fully responsive and works seamlessly across desktop, tablet, and mobile devices.
+
+### Modern UI/UX
+Built with shadcn/ui components for a consistent and professional look.
+
+### Type Safety
+TypeScript ensures code reliability and better developer experience.
+
+### Performance
+Optimized build process with Vite for fast loading times.
+
+## Development
+
+### Code Style
+This project uses ESLint for code quality. Run `npm run lint` to check for issues.
+
+### Adding New Components
+UI components are built using shadcn/ui. To add a new component:
+
+```bash
+npx shadcn-ui@latest add <component-name>
+```
+
+## Building for Production
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory, ready to be deployed to your hosting service.
+
+## Deployment
+
+The application can be deployed to any static hosting service:
+
+- Vercel
+- Netlify
+- GitHub Pages
+- AWS S3 + CloudFront
+- Or any other static hosting provider
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+Contributions are welcome! Please ensure your code follows the existing style and passes linting.
+
+## License
+
+This project is private and proprietary.
+
+## Contact
+
+For inquiries about Pandit Shree Prakash's services, please use the contact form on the website.
+
+---
+
+Built with dedication to spiritual service and modern web technologies.

@@ -95,14 +95,18 @@ const Contact = () => {
                     </a>
                   </div>
                   <div className="flex gap-2">
-                    <Button className="flex-1 gap-2">
-                      <Phone className="w-4 h-4" />
-                      {content[language].callNow}
-                    </Button>
-                    <Button variant="outline" className="flex-1 gap-2">
-                      <MessageCircle className="w-4 h-4" />
-                      {content[language].whatsapp}
-                    </Button>
+                    <a href="tel:+919876543210" className="flex-1">
+                      <Button className="w-full gap-2">
+                        <Phone className="w-4 h-4" />
+                        {content[language].callNow}
+                      </Button>
+                    </a>
+                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Button variant="outline" className="w-full gap-2">
+                        <MessageCircle className="w-4 h-4" />
+                        {content[language].whatsapp}
+                      </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -121,10 +125,12 @@ const Contact = () => {
                   >
                     panditshreeprakash@example.com
                   </a>
-                  <Button className="w-full gap-2">
-                    <Mail className="w-4 h-4" />
-                    {content[language].sendEmail}
-                  </Button>
+                  <a href="mailto:panditshreeprakash@example.com" className="w-full">
+                    <Button className="w-full gap-2">
+                      <Mail className="w-4 h-4" />
+                      {content[language].sendEmail}
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
 
@@ -179,15 +185,21 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="flex justify-center gap-4">
-                    <Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-primary-foreground transition-colors w-14 h-14">
-                      <Youtube className="w-6 h-6" />
-                    </Button>
-                    <Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-primary-foreground transition-colors w-14 h-14">
-                      <Facebook className="w-6 h-6" />
-                    </Button>
-                    <Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-primary-foreground transition-colors w-14 h-14">
-                      <Instagram className="w-6 h-6" />
-                    </Button>
+                    <a href="https://www.youtube.com/@panditshreeprakash" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-primary-foreground transition-colors w-14 h-14">
+                        <Youtube className="w-6 h-6" />
+                      </Button>
+                    </a>
+                    <a href="https://www.facebook.com/panditshreeprakash" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-primary-foreground transition-colors w-14 h-14">
+                        <Facebook className="w-6 h-6" />
+                      </Button>
+                    </a>
+                    <a href="https://www.instagram.com/panditshreeprakash" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-primary-foreground transition-colors w-14 h-14">
+                        <Instagram className="w-6 h-6" />
+                      </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>

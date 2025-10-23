@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#FFF8F0"/>
+
+  <!-- Havan Kund (fire altar) -->
+  <rect x="325" y="300" width="150" height="100" fill="#8B4513"/>
+  <polygon points="300,300 500,300 475,280 325,280" fill="#654321"/>
+
+  <!-- Fire -->
+  <path d="M 350 300 Q 360 250 370 290 Q 375 240 385 280 Q 395 230 405 280 Q 410 250 420 290 Q 430 240 440 290 Q 445 260 450 300" fill="#FF4500"/>
+  <path d="M 360 290 Q 365 260 375 285 Q 385 250 395 285 Q 400 260 410 285 Q 420 250 430 285 Q 435 270 440 290" fill="#FFA500"/>
+  <path d="M 370 285 Q 380 265 390 280 Q 400 260 410 280 Q 420 265 430 280" fill="#FFD700"/>
+
+  <!-- Smoke -->
+  <path d="M 400 230 Q 380 180 390 130 Q 400 150 410 100" stroke="#808080" stroke-width="3" fill="none" opacity="0.4" stroke-dasharray="5,5"/>
+
+  <!-- Offerings around -->
+  <circle cx="250" cy="350" r="30" fill="#DAA520"/>
+  <circle cx="550" cy="350" r="30" fill="#DAA520"/>
+  <rect x="235" y="345" width="30" height="10" fill="#8B4513"/>
+  <rect x="535" y="345" width="30" height="10" fill="#8B4513"/>
+
+  <!-- Kalash -->
+  <ellipse cx="200" cy="400" rx="25" ry="10" fill="#FFD700"/>
+  <rect x="180" y="370" width="40" height="30" fill="#DAA520" rx="3"/>
+  <ellipse cx="200" cy="370" rx="23" ry="8" fill="#FFD700"/>
+
+  <ellipse cx="600" cy="400" rx="25" ry="10" fill="#FFD700"/>
+  <rect x="580" y="370" width="40" height="30" fill="#DAA520" rx="3"/>
+  <ellipse cx="600" cy="370" rx="23" ry="8" fill="#FFD700"/>
+
+  <!-- Mantras in circular pattern -->
+  <circle cx="400" cy="450" r="150" fill="none" stroke="#FF6B35" stroke-width="2" stroke-dasharray="10,5" opacity="0.5"/>
+
+  <!-- Om symbols -->
+  <text x="400" y="150" font-family="serif" font-size="60" font-weight="bold" fill="#FF6B35" text-anchor="middle">ॐ</text>
+
+  <!-- Title -->
+  <text x="400" y="550" font-family="serif" font-size="38" font-weight="bold" fill="#8B4513" text-anchor="middle">Mahayagna</text>
+</svg>

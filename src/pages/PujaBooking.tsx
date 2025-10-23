@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Phone, Image as ImageIcon, Clock, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -229,10 +230,12 @@ const PujaBooking = () => {
                       <span>{service.duration}</span>
                     </div>
                     <div className="flex gap-2">
-                      <Button variant="default" size="sm" className="flex-1 gap-2">
-                        <Phone className="w-4 h-4" />
-                        {content[language].bookNow}
-                      </Button>
+                      <Link to="/contact" className="flex-1">
+                        <Button variant="default" size="sm" className="w-full gap-2">
+                          <Phone className="w-4 h-4" />
+                          {content[language].bookNow}
+                        </Button>
+                      </Link>
                       <Button variant="outline" size="sm" className="flex-1 gap-2">
                         <ImageIcon className="w-4 h-4" />
                         {content[language].viewPhotos}
@@ -302,10 +305,12 @@ const PujaBooking = () => {
                   </div>
                 </div>
                 <div className="text-center pt-4">
-                  <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary">
-                    <Phone className="w-5 h-5" />
-                    {content[language].bookNow}
-                  </Button>
+                  <Link to="/contact">
+                    <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary">
+                      <Phone className="w-5 h-5" />
+                      {content[language].bookNow}
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

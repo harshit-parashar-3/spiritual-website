@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { ShoppingCart, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface SpiritualProductsProps {
   language: "hi" | "en";
@@ -18,31 +19,37 @@ const SpiritualProducts = ({ language }: SpiritualProductsProps) => {
           name: "श्री यंत्र",
           desc: "विशेष अभिमंत्रित श्री यंत्र",
           price: "₹ 2,100",
+          image: "/images/products/yantras.svg",
         },
         {
           name: "रुद्राक्ष माला",
           desc: "प्राकृतिक रुद्राक्ष की माला",
           price: "₹ 1,500",
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "नवरत्न",
           desc: "प्रमाणित नवरत्न",
           price: "₹ 5,100",
+          image: "/images/products/yantras.svg",
         },
         {
           name: "शिवलिंग",
           desc: "नर्मदेश्वर शिवलिंग",
           price: "₹ 3,100",
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "तुलसी माला",
           desc: "शुद्ध तुलसी की माला",
           price: "₹ 500",
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "गणेश प्रतिमा",
           desc: "पंचधातु गणेश जी",
           price: "₹ 2,500",
+          image: "/images/products/puja-items.svg",
         },
       ],
     },
@@ -56,31 +63,37 @@ const SpiritualProducts = ({ language }: SpiritualProductsProps) => {
           name: "Shree Yantra",
           desc: "Specially consecrated Shree Yantra",
           price: "₹ 2,100",
+          image: "/images/products/yantras.svg",
         },
         {
           name: "Rudraksh Mala",
           desc: "Natural Rudraksh Beads Mala",
           price: "₹ 1,500",
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "Navaratna",
           desc: "Certified Nine Gemstones",
           price: "₹ 5,100",
+          image: "/images/products/yantras.svg",
         },
         {
           name: "Shivling",
           desc: "Narmadeshwar Shivling",
           price: "₹ 3,100",
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "Tulsi Mala",
           desc: "Pure Tulsi Beads Mala",
           price: "₹ 500",
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "Ganesh Idol",
           desc: "Panchadhatu Ganesh Ji",
           price: "₹ 2,500",
+          image: "/images/products/puja-items.svg",
         },
       ],
     },
@@ -105,8 +118,15 @@ const SpiritualProducts = ({ language }: SpiritualProductsProps) => {
               className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border animate-fade-up overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="h-48 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center">
-                <Sparkles className="w-16 h-16 text-primary group-hover:scale-110 transition-transform" />
+              <div className="h-48 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 flex items-center justify-center overflow-hidden relative">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute top-2 right-2">
+                  <Sparkles className="w-6 h-6 text-primary animate-pulse" />
+                </div>
               </div>
               <CardHeader>
                 <CardTitle className="text-xl">{product.name}</CardTitle>
@@ -116,19 +136,23 @@ const SpiritualProducts = ({ language }: SpiritualProductsProps) => {
                 <p className="text-2xl font-bold text-primary">{product.price}</p>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full gap-2">
-                  <ShoppingCart className="w-4 h-4" />
-                  {content[language].addToCart}
-                </Button>
+                <Link to="/contact" className="w-full">
+                  <Button variant="outline" className="w-full gap-2">
+                    <ShoppingCart className="w-4 h-4" />
+                    {content[language].addToCart}
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}
         </div>
 
         <div className="text-center">
-          <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary">
-            {content[language].viewAll}
-          </Button>
+          <Link to="/products">
+            <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary">
+              {content[language].viewAll}
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

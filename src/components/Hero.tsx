@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { Phone, Mail } from "lucide-react";
-import heroImage from "@/assets/hero-spiritual.jpg";
+import { Link } from "react-router-dom";
 
 interface HeroProps {
   language: "hi" | "en";
@@ -31,9 +31,9 @@ const Hero = ({ language }: HeroProps) => {
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: 'url(/images/hero-background.svg)' }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/80 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
       </div>
 
       {/* Content */}
@@ -61,14 +61,18 @@ const Hero = ({ language }: HeroProps) => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all">
-              <Phone className="w-5 h-5" />
-              {content[language].cta1}
-            </Button>
-            <Button size="lg" variant="outline" className="gap-2">
-              <Mail className="w-5 h-5" />
-              {content[language].cta2}
-            </Button>
+            <Link to="/puja-booking">
+              <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary hover:shadow-lg transition-all">
+                <Phone className="w-5 h-5" />
+                {content[language].cta1}
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="gap-2">
+                <Mail className="w-5 h-5" />
+                {content[language].cta2}
+              </Button>
+            </Link>
           </div>
 
           {/* Decorative Divider */}

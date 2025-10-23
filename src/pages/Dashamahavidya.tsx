@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Sparkles, Phone, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -237,14 +238,18 @@ const Dashamahavidya = () => {
                     ))}
                   </ul>
                   <div className="text-center pt-6 space-y-4">
-                    <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary">
-                      <BookOpen className="w-5 h-5" />
-                      {content[language].learnMore}
-                    </Button>
-                    <Button size="lg" variant="outline" className="gap-2 ml-4">
-                      <Phone className="w-5 h-5" />
-                      {content[language].contact}
-                    </Button>
+                    <Link to="/contact">
+                      <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary">
+                        <BookOpen className="w-5 h-5" />
+                        {content[language].learnMore}
+                      </Button>
+                    </Link>
+                    <Link to="/contact">
+                      <Button size="lg" variant="outline" className="gap-2 ml-4">
+                        <Phone className="w-5 h-5" />
+                        {content[language].contact}
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -269,10 +274,12 @@ const Dashamahavidya = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex justify-center gap-4">
-                <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary">
-                  <Phone className="w-5 h-5" />
-                  {content[language].contact}
-                </Button>
+                <Link to="/contact">
+                  <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary">
+                    <Phone className="w-5 h-5" />
+                    {content[language].contact}
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>

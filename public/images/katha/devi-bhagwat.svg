@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#FFF8F0"/>
+
+  <!-- Lotus flower -->
+  <ellipse cx="400" cy="300" rx="120" ry="40" fill="#FF69B4" opacity="0.6"/>
+  <ellipse cx="400" cy="300" rx="100" ry="35" fill="#FF1493" opacity="0.5" transform="rotate(45 400 300)"/>
+  <ellipse cx="400" cy="300" rx="100" ry="35" fill="#FF1493" opacity="0.5" transform="rotate(-45 400 300)"/>
+  <ellipse cx="400" cy="300" rx="100" ry="35" fill="#FF69B4" opacity="0.5" transform="rotate(90 400 300)"/>
+  <circle cx="400" cy="300" r="40" fill="#FFD700"/>
+
+  <!-- Trishul symbol -->
+  <line x1="400" y1="150" x2="400" y2="450" stroke="#8B0000" stroke-width="6"/>
+  <path d="M 360 170 L 400 140 L 440 170" stroke="#8B0000" stroke-width="6" fill="none"/>
+  <line x1="380" y1="160" x2="380" y2="190" stroke="#8B0000" stroke-width="4"/>
+  <line x1="420" y1="160" x2="420" y2="190" stroke="#8B0000" stroke-width="4"/>
+
+  <!-- Decorative -->
+  <circle cx="250" cy="150" r="25" fill="none" stroke="#FF1493" stroke-width="2" opacity="0.4"/>
+  <circle cx="550" cy="450" r="35" fill="none" stroke="#FF1493" stroke-width="2" opacity="0.4"/>
+
+  <!-- Title -->
+  <text x="400" y="80" font-family="serif" font-size="42" font-weight="bold" fill="#8B0000" text-anchor="middle">Devi Bhagwat</text>
+  <text x="400" y="560" font-family="serif" font-size="32" fill="#FF1493" text-anchor="middle">देवी भागवत</text>
+</svg>

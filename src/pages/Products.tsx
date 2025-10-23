@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Sparkles, Phone, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -21,90 +22,105 @@ const Products = () => {
           desc: "विशेष अभिमंत्रित पंचधातु श्री यंत्र, धन-समृद्धि के लिए",
           price: "₹ 2,100",
           featured: true,
+          image: "/images/products/yantras.svg",
         },
         {
           name: "महामृत्युंजय यंत्र",
           desc: "स्वास्थ्य एवं दीर्घायु के लिए सिद्ध यंत्र",
           price: "₹ 1,800",
           featured: false,
+          image: "/images/products/yantras.svg",
         },
         {
           name: "रुद्राक्ष माला (5 मुखी)",
           desc: "प्राकृतिक 108 मनके रुद्राक्ष की माला",
           price: "₹ 1,500",
           featured: false,
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "रुद्राक्ष (एकमुखी)",
           desc: "दुर्लभ एकमुखी रुद्राक्ष, शिव का आशीर्वाद",
           price: "₹ 11,000",
           featured: true,
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "नवरत्न अंगूठी",
           desc: "प्रमाणित नवरत्न की शुद्ध चांदी की अंगूठी",
           price: "₹ 5,100",
           featured: false,
+          image: "/images/products/yantras.svg",
         },
         {
           name: "माणिक रत्न",
           desc: "प्राकृतिक माणिक रत्न, सूर्य के लिए",
           price: "₹ 8,500",
           featured: false,
+          image: "/images/products/yantras.svg",
         },
         {
           name: "नर्मदेश्वर शिवलिंग",
           desc: "नर्मदा नदी से प्राप्त प्राकृतिक शिवलिंग",
           price: "₹ 3,100",
           featured: true,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "स्फटिक शिवलिंग",
           desc: "शुद्ध स्फटिक का पूजित शिवलिंग",
           price: "₹ 2,500",
           featured: false,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "तुलसी माला",
           desc: "शुद्ध वृंदावन तुलसी की 108 मनके माला",
           price: "₹ 500",
           featured: false,
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "चंदन माला",
           desc: "प्राकृतिक चंदन की सुगंधित माला",
           price: "₹ 1,200",
           featured: false,
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "गणेश प्रतिमा (पंचधातु)",
           desc: "पंच धातु से निर्मित गणेश जी की मूर्ति",
           price: "₹ 2,500",
           featured: false,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "लक्ष्मी नारायण युगल",
           desc: "पीतल की लक्ष्मी नारायण प्रतिमा",
           price: "₹ 3,800",
           featured: true,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "हनुमान जी प्रतिमा",
           desc: "पंचधातु हनुमान जी की वीर मूर्ति",
           price: "₹ 2,200",
           featured: false,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "दुर्गा माता प्रतिमा",
           desc: "अष्टभुजा दुर्गा माता की सुंदर प्रतिमा",
           price: "₹ 3,500",
           featured: false,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "कुबेर यंत्र",
           desc: "धन प्राप्ति के लिए विशेष सिद्ध यंत्र",
           price: "₹ 1,600",
           featured: false,
+          image: "/images/products/yantras.svg",
         },
       ],
     },
@@ -119,90 +135,105 @@ const Products = () => {
           desc: "Specially consecrated Panchadhatu Shree Yantra for wealth & prosperity",
           price: "₹ 2,100",
           featured: true,
+          image: "/images/products/yantras.svg",
         },
         {
           name: "Mahamrityunjay Yantra",
           desc: "Siddh Yantra for health & longevity",
           price: "₹ 1,800",
           featured: false,
+          image: "/images/products/yantras.svg",
         },
         {
           name: "Rudraksh Mala (5 Mukhi)",
           desc: "Natural 108 beads Rudraksh Mala",
           price: "₹ 1,500",
           featured: false,
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "Rudraksh (Ek Mukhi)",
           desc: "Rare one-faced Rudraksh, blessing of Shiva",
           price: "₹ 11,000",
           featured: true,
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "Navaratna Ring",
           desc: "Certified nine gemstones in pure silver ring",
           price: "₹ 5,100",
           featured: false,
+          image: "/images/products/yantras.svg",
         },
         {
           name: "Ruby Gemstone",
           desc: "Natural Ruby gemstone for Sun",
           price: "₹ 8,500",
           featured: false,
+          image: "/images/products/yantras.svg",
         },
         {
           name: "Narmadeshwar Shivling",
           desc: "Natural Shivling from Narmada river",
           price: "₹ 3,100",
           featured: true,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "Crystal Shivling",
           desc: "Pure crystal consecrated Shivling",
           price: "₹ 2,500",
           featured: false,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "Tulsi Mala",
           desc: "Pure Vrindavan Tulsi 108 beads Mala",
           price: "₹ 500",
           featured: false,
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "Sandalwood Mala",
           desc: "Natural fragrant sandalwood Mala",
           price: "₹ 1,200",
           featured: false,
+          image: "/images/products/rudraksha.svg",
         },
         {
           name: "Ganesh Idol (Panchadhatu)",
           desc: "Ganesh Ji idol made from five metals",
           price: "₹ 2,500",
           featured: false,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "Lakshmi Narayan Pair",
           desc: "Brass Lakshmi Narayan idol",
           price: "₹ 3,800",
           featured: true,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "Hanuman Ji Idol",
           desc: "Panchadhatu heroic Hanuman Ji idol",
           price: "₹ 2,200",
           featured: false,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "Durga Mata Idol",
           desc: "Beautiful Ashtabhuja Durga Mata idol",
           price: "₹ 3,500",
           featured: false,
+          image: "/images/products/puja-items.svg",
         },
         {
           name: "Kuber Yantra",
           desc: "Special Siddh Yantra for wealth acquisition",
           price: "₹ 1,600",
           featured: false,
+          image: "/images/products/yantras.svg",
         },
       ],
     },
@@ -245,9 +276,15 @@ const Products = () => {
                       {content[language].featured}
                     </Badge>
                   )}
-                  <div className="h-48 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center relative overflow-hidden">
-                    <Sparkles className="w-16 h-16 text-primary group-hover:scale-110 transition-transform" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card/50 to-transparent" />
+                  <div className="h-48 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 flex items-center justify-center overflow-hidden relative">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute top-2 right-2">
+                      <Sparkles className="w-6 h-6 text-primary animate-pulse" />
+                    </div>
                   </div>
                   <CardHeader>
                     <CardTitle className="text-xl">{product.name}</CardTitle>
@@ -257,10 +294,12 @@ const Products = () => {
                     <p className="text-2xl font-bold text-primary">{product.price}</p>
                   </CardContent>
                   <CardFooter>
-                    <Button variant="outline" className="w-full gap-2">
-                      <Phone className="w-4 h-4" />
-                      {content[language].contact}
-                    </Button>
+                    <Link to="/contact" className="w-full">
+                      <Button variant="outline" className="w-full gap-2">
+                        <Phone className="w-4 h-4" />
+                        {content[language].contact}
+                      </Button>
+                    </Link>
                   </CardFooter>
                 </Card>
               ))}
@@ -285,10 +324,12 @@ const Products = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex justify-center gap-4">
-                <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary">
-                  <Phone className="w-5 h-5" />
-                  {content[language].contact}
-                </Button>
+                <Link to="/contact">
+                  <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary">
+                    <Phone className="w-5 h-5" />
+                    {content[language].contact}
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>

@@ -1,0 +1,20 @@
+Sample Video Placeholder: Shrimad Bhagwat Katha Session
+
+This is a placeholder file for a katha video.
+Replace this file with actual video content in formats like:
+- MP4 (recommended)
+- WebM
+- OGG
+
+Suggested video specifications:
+- Resolution: 1920x1080 (Full HD) or 1280x720 (HD)
+- Frame rate: 30fps
+- Bitrate: 5-10 Mbps for HD quality
+- Audio: AAC codec, 128-192 kbps
+
+File naming convention:
+- bhagwat-katha-session-1.mp4
+- ram-katha-highlights.mp4
+- devi-bhagwat-full.mp4
+
+Remember to optimize videos for web delivery using tools like FFmpeg or HandBrake.

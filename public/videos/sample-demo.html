@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Katha Video - Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .video-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #FF6B35;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .note {
+            background: #FFF8F0;
+            border-left: 4px solid #FF6B35;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .demo-placeholder {
+            background: linear-gradient(135deg, #FFE5CC 0%, #FFF8F0 100%);
+            border-radius: 10px;
+            padding: 60px 30px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .om-symbol {
+            font-size: 80px;
+            color: #FF6B35;
+            margin-bottom: 20px;
+        }
+
+        .instructions {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        code {
+            background: #333;
+            color: #0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <h1>🎥 Katha Video Demo Placeholder</h1>
+
+        <div class="demo-placeholder">
+            <div class="om-symbol">ॐ</div>
+            <h2 style="color: #2C1810;">Shrimad Bhagwat Katha</h2>
+            <p style="color: #5D4037;">श्रीमद्भागवत कथा</p>
+        </div>
+
+        <div class="note">
+            <h3>📹 To Add Real Videos:</h3>
+            <ol>
+                <li>Place your MP4 video files in <code>/public/videos/</code></li>
+                <li>Name them descriptively (e.g., <code>bhagwat-katha-day1.mp4</code>)</li>
+                <li>Update the components to use <code>&lt;video&gt;</code> tags</li>
+            </ol>
+        </div>
+
+        <div class="instructions">
+            <h3>Example HTML5 Video Code:</h3>
+            <pre style="background: #333; color: #0f0; padding: 15px; border-radius: 5px; overflow-x: auto;">
+&lt;video controls poster="/images/katha/bhagwat-katha.svg"&gt;
+  &lt;source src="/videos/bhagwat-katha.mp4" type="video/mp4"&gt;
+  &lt;source src="/videos/bhagwat-katha.webm" type="video/webm"&gt;
+  Your browser does not support video playback.
+&lt;/video&gt;</pre>
+        </div>
+
+        <div class="note">
+            <h3>🎬 Recommended Video Settings:</h3>
+            <ul>
+                <li><strong>Format:</strong> MP4 (H.264)</li>
+                <li><strong>Resolution:</strong> 1280x720 or 1920x1080</li>
+                <li><strong>Bitrate:</strong> 5-10 Mbps</li>
+                <li><strong>Audio:</strong> AAC, 128-192 kbps</li>
+            </ul>
+        </div>
+
+        <p style="text-align: center; color: #888; margin-top: 30px;">
+            For detailed video specifications, see <code>/public/videos/README.md</code>
+        </p>
+    </div>
+</body>
+</html>

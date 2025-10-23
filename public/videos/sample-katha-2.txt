@@ -1,0 +1,20 @@
+Sample Video Placeholder: Ram Katha Highlights
+
+This is a placeholder file for a katha video.
+Replace this file with actual video content.
+
+Content Ideas:
+- Full katha sessions (7-day series)
+- Daily highlights (10-15 minutes)
+- Special discourses
+- Bhajan and aarti sessions
+- Puja ceremony recordings
+- Festival celebrations
+
+Video Hosting Options:
+1. Self-hosted (requires larger server storage)
+2. YouTube (embedded)
+3. Vimeo (embedded)
+4. Cloud storage (AWS S3, Cloudflare)
+
+For better performance, consider using a CDN for video delivery.

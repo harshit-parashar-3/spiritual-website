@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#FFF8F0"/>
+
+  <!-- Shiva Linga -->
+  <ellipse cx="400" cy="400" rx="120" ry="40" fill="#8B4513"/>
+  <rect x="340" y="250" width="120" height="150" fill="#696969" rx="60"/>
+  <ellipse cx="400" cy="250" rx="60" ry="20" fill="#808080"/>
+
+  <!-- Third eye -->
+  <ellipse cx="400" cy="280" rx="20" ry="10" fill="#FF4500"/>
+
+  <!-- Bilva leaves -->
+  <ellipse cx="350" cy="230" rx="30" ry="50" fill="#228B22" transform="rotate(-30 350 230)"/>
+  <ellipse cx="400" cy="210" rx="30" ry="50" fill="#228B22"/>
+  <ellipse cx="450" cy="230" rx="30" ry="50" fill="#228B22" transform="rotate(30 450 230)"/>
+
+  <!-- Trishul -->
+  <line x1="550" y1="200" x2="550" y2="400" stroke="#4169E1" stroke-width="6"/>
+  <path d="M 520 220 L 550 180 L 580 220" stroke="#4169E1" stroke-width="6" fill="none"/>
+  <line x1="535" y1="210" x2="535" y2="240" stroke="#4169E1" stroke-width="4"/>
+  <line x1="565" y1="210" x2="565" y2="240" stroke="#4169E1" stroke-width="4"/>
+
+  <!-- Damaru -->
+  <path d="M 220 300 Q 250 320 220 340 M 220 300 Q 190 320 220 340" stroke="#8B4513" stroke-width="6" fill="#D2691E"/>
+
+  <!-- Om -->
+  <text x="400" cy="140" font-family="serif" font-size="60" font-weight="bold" fill="#4169E1" text-anchor="middle">ॐ</text>
+
+  <!-- Title -->
+  <text x="400" y="500" font-family="serif" font-size="42" font-weight="bold" fill="#2C1810" text-anchor="middle">Shiv Mahapuran</text>
+  <text x="400" y="560" font-family="serif" font-size="32" fill="#4169E1" text-anchor="middle">शिव महापुराण</text>
+</svg>

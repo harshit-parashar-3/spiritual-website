@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Globe, Menu, X } from "lucide-react";
 
@@ -9,6 +10,7 @@ interface HeaderProps {
 
 const Header = ({ language, onLanguageChange }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = {
     hi: [
@@ -17,6 +19,7 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
       { name: "उत्पाद", path: "/products" },
       { name: "पूजा बुकिंग", path: "/puja-booking" },
       { name: "दशमहाविद्या", path: "/dashamahavidya" },
+      { name: "आरती", path: "/aarti" },
       { name: "संपर्क", path: "/contact" },
     ],
     en: [
@@ -25,6 +28,7 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
       { name: "Products", path: "/products" },
       { name: "Puja Booking", path: "/puja-booking" },
       { name: "Dashamahavidya", path: "/dashamahavidya" },
+      { name: "Aarti", path: "/aarti" },
       { name: "Contact", path: "/contact" },
     ],
   };
@@ -34,7 +38,7 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-primary-foreground font-bold text-xl">
               ॐ
             </div>
@@ -46,18 +50,22 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
                 {language === "hi" ? "आध्यात्मिक सेवाएं" : "Spiritual Services"}
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems[language].map((item, index) => (
-              <a
+              <Link
                 key={index}
-                href={item.path}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                to={item.path}
+                className={`font-medium transition-colors ${
+                  location.pathname === item.path
+                    ? "text-primary border-b-2 border-primary"
+                    : "text-foreground hover:text-primary"
+                }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -89,14 +97,18 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
           <nav className="md:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col space-y-4">
               {navItems[language].map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href={item.path}
-                  className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                  to={item.path}
+                  className={`font-medium py-2 transition-colors ${
+                    location.pathname === item.path
+                      ? "text-primary font-bold"
+                      : "text-foreground hover:text-primary"
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
           </nav>

@@ -1,24 +1,58 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { PlayCircle, Youtube } from "lucide-react";
 import { Button } from "./ui/button";
+import { useState } from "react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "./ui/dialog";
 
 interface VideoGalleryProps {
   language: "hi" | "en";
 }
 
 const VideoGallery = ({ language }: VideoGalleryProps) => {
+  const [selectedVideo, setSelectedVideo] = useState<number | null>(null);
+
   const content = {
     hi: {
       title: "कथा एवं अनुष्ठान वीडियो",
       subtitle: "हमारे यूट्यूब चैनल पर आध्यात्मिक वीडियो देखें",
       viewChannel: "यूट्यूब चैनल देखें",
       categories: [
-        { title: "श्रीमद्भागवत कथा", desc: "संपूर्ण कथा प्रवचन" },
-        { title: "श्री राम कथा", desc: "रामायण कथा वाचन" },
-        { title: "देवी भागवत कथा", desc: "देवी महात्म्य प्रवचन" },
-        { title: "शिव महापुराण", desc: "शिव कथा एवं महिमा" },
-        { title: "विशेष अनुष्ठान", desc: "महायज्ञ एवं पूजा" },
-        { title: "आध्यात्मिक प्रवचन", desc: "दैनिक जीवन में धर्म" },
+        {
+          title: "श्रीमद्भागवत कथा",
+          desc: "संपूर्ण कथा प्रवचन",
+          image: "/images/katha/bhagwat-katha.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
+        {
+          title: "श्री राम कथा",
+          desc: "रामायण कथा वाचन",
+          image: "/images/katha/ram-katha.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
+        {
+          title: "देवी भागवत कथा",
+          desc: "देवी महात्म्य प्रवचन",
+          image: "/images/katha/devi-bhagwat.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
+        {
+          title: "शिव महापुराण",
+          desc: "शिव कथा एवं महिमा",
+          image: "/images/katha/shiv-mahapuran.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
+        {
+          title: "विशेष अनुष्ठान",
+          desc: "महायज्ञ एवं पूजा",
+          image: "/images/events/mahayagna.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
+        {
+          title: "आध्यात्मिक प्रवचन",
+          desc: "दैनिक जीवन में धर्म",
+          image: "/images/events/spiritual-gathering.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
       ],
     },
     en: {
@@ -26,12 +60,42 @@ const VideoGallery = ({ language }: VideoGalleryProps) => {
       subtitle: "Watch spiritual videos on our YouTube channel",
       viewChannel: "View YouTube Channel",
       categories: [
-        { title: "Shrimad Bhagwat Katha", desc: "Complete Katha Discourse" },
-        { title: "Shri Ram Katha", desc: "Ramayana Recitation" },
-        { title: "Devi Bhagwat Katha", desc: "Goddess Glory Discourse" },
-        { title: "Shiv Mahapuran", desc: "Shiva Stories & Glory" },
-        { title: "Special Anusthan", desc: "Grand Yagya & Puja" },
-        { title: "Spiritual Discourses", desc: "Dharma in Daily Life" },
+        {
+          title: "Shrimad Bhagwat Katha",
+          desc: "Complete Katha Discourse",
+          image: "/images/katha/bhagwat-katha.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
+        {
+          title: "Shri Ram Katha",
+          desc: "Ramayana Recitation",
+          image: "/images/katha/ram-katha.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
+        {
+          title: "Devi Bhagwat Katha",
+          desc: "Goddess Glory Discourse",
+          image: "/images/katha/devi-bhagwat.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
+        {
+          title: "Shiv Mahapuran",
+          desc: "Shiva Stories & Glory",
+          image: "/images/katha/shiv-mahapuran.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
+        {
+          title: "Special Anusthan",
+          desc: "Grand Yagya & Puja",
+          image: "/images/events/mahayagna.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
+        {
+          title: "Spiritual Discourses",
+          desc: "Dharma in Daily Life",
+          image: "/images/events/spiritual-gathering.svg",
+          youtubeId: "dQw4w9WgXcQ" // Replace with your actual YouTube video ID
+        },
       ],
     },
   };
@@ -52,25 +116,72 @@ const VideoGallery = ({ language }: VideoGalleryProps) => {
           {content[language].categories.map((category, index) => (
             <Card
               key={index}
-              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card animate-fade-up"
+              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border bg-card animate-fade-up overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
+              <div className="relative h-48 overflow-hidden bg-black">
+                {category.youtubeId ? (
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${category.youtubeId}`}
+                    title={category.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/20 to-secondary/20">
+                    <Youtube className="w-16 h-16 text-primary" />
+                  </div>
+                )}
+              </div>
               <CardHeader>
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <PlayCircle className="w-6 h-6 text-primary-foreground" />
-                </div>
                 <CardTitle className="text-xl">{category.title}</CardTitle>
                 <CardDescription>{category.desc}</CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="w-full gap-2">
+                <Button
+                  variant="outline"
+                  className="w-full gap-2"
+                  onClick={() => setSelectedVideo(index)}
+                >
                   <Youtube className="w-4 h-4" />
-                  {language === "hi" ? "वीडियो देखें" : "Watch Videos"}
+                  {language === "hi" ? "पूर्ण स्क्रीन देखें" : "View Fullscreen"}
                 </Button>
               </CardContent>
             </Card>
           ))}
         </div>
+
+        {/* Video Player Dialog */}
+        <Dialog open={selectedVideo !== null} onOpenChange={() => setSelectedVideo(null)}>
+          <DialogContent className="max-w-4xl">
+            <DialogHeader>
+              <DialogTitle className="text-2xl">
+                {selectedVideo !== null && content[language].categories[selectedVideo].title}
+              </DialogTitle>
+              <DialogDescription>
+                {selectedVideo !== null && content[language].categories[selectedVideo].desc}
+              </DialogDescription>
+            </DialogHeader>
+            <div className="aspect-video bg-black rounded-lg overflow-hidden">
+              {selectedVideo !== null && content[language].categories[selectedVideo].youtubeId && (
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${content[language].categories[selectedVideo].youtubeId}?autoplay=1`}
+                  title={content[language].categories[selectedVideo].title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              )}
+            </div>
+          </DialogContent>
+        </Dialog>
 
         <div className="text-center">
           <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-secondary">
