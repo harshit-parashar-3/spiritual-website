@@ -24,7 +24,8 @@
   <text x="600" y="250" font-family="serif" font-size="120" font-weight="bold" fill="#FF6B35" text-anchor="middle" opacity="0.7">ॐ</text>
 
   <!-- Text -->
-  <text x="600" y="370" font-family="serif" font-size="48" font-weight="bold" fill="#2C1810" text-anchor="middle">Pandit Shree Prakash</text>
-  <text x="600" y="420" font-family="sans-serif" font-size="24" fill="#5D4037" text-anchor="middle">Spiritual Services & Katha</text>
-  <text x="600" y="480" font-family="serif" font-size="36" fill="#FF6B35" text-anchor="middle">श्रीमद्भागवत कथा • राम कथा</text>
+  <text x="600" y="350" font-family="serif" font-size="32" font-weight="bold" fill="#2C1810" text-anchor="middle">सर्वसिद्धि श्री माँ पीतांबरा</text>
+  <text x="600" y="390" font-family="serif" font-size="28" font-weight="bold" fill="#2C1810" text-anchor="middle">ज्योतिष एवं अनुष्ठान संस्थान</text>
+  <text x="600" y="440" font-family="sans-serif" font-size="24" fill="#5D4037" text-anchor="middle">Spiritual Services & Katha</text>
+  <text x="600" y="490" font-family="serif" font-size="32" fill="#FF6B35" text-anchor="middle">श्रीमद्भागवत कथा • राम कथा</text>
 </svg>

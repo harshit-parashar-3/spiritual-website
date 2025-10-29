@@ -23,11 +23,11 @@ const Footer = ({ language }: FooterProps) => {
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-primary-foreground font-bold text-lg">
               ॐ
             </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-lg">
-                {language === "hi" ? "पंडित श्री प्रकाश" : "Pandit Shree Prakash"}
+            <div className="flex flex-col py-1">
+              <span className="font-bold text-lg leading-relaxed">
+                {language === "hi" ? "सर्वसिद्धि श्री माँ पीतांबरा ज्योतिष एवं अनुष्ठान संस्थान" : "Sarvasiddhi Shri Maa Pitambara Jyotish Evam Anusthan Sansthan"}
               </span>
-              <span className="text-xs opacity-80">{content[language].tagline}</span>
+              <span className="text-xs opacity-80 leading-relaxed">{content[language].tagline}</span>
             </div>
           </div>
 
@@ -35,8 +35,8 @@ const Footer = ({ language }: FooterProps) => {
           <div className="w-full max-w-md h-px bg-background/20" />
 
           {/* Copyright */}
-          <p className="text-sm text-center opacity-80">
-            © 2025 {language === "hi" ? "पंडित श्री प्रकाश" : "Pandit Shree Prakash"}.{" "}
+          <p className="text-sm text-center opacity-80 leading-relaxed py-1">
+            © 2025 {language === "hi" ? "सर्वसिद्धि श्री माँ पीतांबरा ज्योतिष एवं अनुष्ठान संस्थान" : "Sarvasiddhi Shri Maa Pitambara Jyotish Evam Anusthan Sansthan"}.{" "}
             {content[language].copyright}.
           </p>
         </div>

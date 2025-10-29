@@ -9,7 +9,7 @@ interface HeroProps {
 const Hero = ({ language }: HeroProps) => {
   const content = {
     hi: {
-      title: "पंडित श्री प्रकाश",
+      title: "सर्वसिद्धि श्री माँ पीतांबरा ज्योतिष एवं अनुष्ठान संस्थान",
       subtitle: "आध्यात्मिक मार्गदर्शन एवं कथा वाचन",
       description:
         "श्रीमद्भागवत कथा, श्री राम कथा, श्री देवी भागवत कथा, श्री शिव महापुराण कथा एवं आध्यात्मिक प्रवचन",
@@ -17,7 +17,7 @@ const Hero = ({ language }: HeroProps) => {
       cta2: "संपर्क करें",
     },
     en: {
-      title: "Pandit Shree Prakash",
+      title: "Sarvasiddhi Shri Maa Pitambara Jyotish Evam Anusthan Sansthan",
       subtitle: "Spiritual Guidance & Katha Recitation",
       description:
         "Shrimad Bhagwat Katha, Shri Ram Katha, Shri Devi Bhagwat Katha, Shri Shiv Mahapuran Katha & Spiritual Discourses",
@@ -45,12 +45,12 @@ const Hero = ({ language }: HeroProps) => {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-relaxed py-2">
             {content[language].title}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-2xl md:text-3xl font-semibold text-foreground">
+          <p className="text-2xl md:text-3xl font-semibold text-foreground leading-relaxed">
             {content[language].subtitle}
           </p>
 

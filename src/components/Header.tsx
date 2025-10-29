@@ -42,11 +42,11 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-primary-foreground font-bold text-xl">
               ॐ
             </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-lg text-foreground">
-                {language === "hi" ? "पंडित श्री प्रकाश" : "Pandit Shree Prakash"}
+            <div className="flex flex-col py-1">
+              <span className="font-bold text-lg text-foreground leading-relaxed">
+                {language === "hi" ? "सर्वसिद्धि श्री माँ पीतांबरा ज्योतिष एवं अनुष्ठान संस्थान" : "Sarvasiddhi Shri Maa Pitambara Jyotish Evam Anusthan Sansthan"}
               </span>
-              <span className="text-xs text-muted-foreground">
+              <span className="text-xs text-muted-foreground leading-relaxed">
                 {language === "hi" ? "आध्यात्मिक सेवाएं" : "Spiritual Services"}
               </span>
             </div>
@@ -58,7 +58,7 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
               <Link
                 key={index}
                 to={item.path}
-                className={`font-medium transition-colors ${
+                className={`font-medium transition-colors leading-relaxed py-1 ${
                   location.pathname === item.path
                     ? "text-primary border-b-2 border-primary"
                     : "text-foreground hover:text-primary"
@@ -100,7 +100,7 @@ const Header = ({ language, onLanguageChange }: HeaderProps) => {
                 <Link
                   key={index}
                   to={item.path}
-                  className={`font-medium py-2 transition-colors ${
+                  className={`font-medium py-2 transition-colors leading-relaxed ${
                     location.pathname === item.path
                       ? "text-primary font-bold"
                       : "text-foreground hover:text-primary"

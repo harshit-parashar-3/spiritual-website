@@ -115,4 +115,16 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Ensure proper rendering of Devanagari script (Hindi text) */
+  * {
+    line-height: 1.6;
+  }
+
+  /* Specific handling for Hindi text to prevent character clipping */
+  [lang="hi"],
+  .hindi-text {
+    line-height: 1.75;
+    padding-bottom: 2px;
+  }
 }

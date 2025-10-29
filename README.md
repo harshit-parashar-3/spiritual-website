@@ -1,6 +1,6 @@
 # Spiritual Sanctuary Portal
 
-A modern web platform for Pandit Shree Prakash's spiritual services, featuring katha recitations, puja bookings, and authentic consecrated products.
+A modern web platform for Sarvasiddhi Shri Maa Pitambara Jyotish Evam Anusthan Sansthan's spiritual services, featuring katha recitations, puja bookings, and authentic consecrated products.
 
 ## Overview
 
@@ -10,7 +10,7 @@ This portal provides a comprehensive digital presence for spiritual services inc
 - **Puja Bookings**: Schedule and manage spiritual ceremonies
 - **Consecrated Products**: Browse and purchase authentic spiritual items
 - **Event Calendar**: Stay updated with upcoming spiritual events
-- **About & Contact**: Learn more about Pandit Shree Prakash and get in touch
+- **About & Contact**: Learn more about Sarvasiddhi Shri Maa Pitambara Jyotish Evam Anusthan Sansthan and get in touch
 
 ## Tech Stack
 
@@ -192,7 +192,7 @@ This project is private and proprietary.
 
 ## Contact
 
-For inquiries about Pandit Shree Prakash's services, please use the contact form on the website.
+For inquiries about Sarvasiddhi Shri Maa Pitambara Jyotish Evam Anusthan Sansthan's services, please use the contact form on the website.
 
 ---
 
